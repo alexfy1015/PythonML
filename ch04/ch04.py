@@ -92,3 +92,5 @@ ohe = ColumnTransformer([("one_hot_encoder", OneHotEncoder(),[0])], remainder="p
 #OneHotEncoder(categories=[0])
 ohe.fit_transform(X)
 
+#%%
+
