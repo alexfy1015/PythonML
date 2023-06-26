@@ -93,4 +93,9 @@ ohe = ColumnTransformer([("one_hot_encoder", OneHotEncoder(),[0])], remainder="p
 ohe.fit_transform(X)
 
 #%%
+#pd.get_dummies(df[['price', 'color', 'size']])
+pd.get_dummies(df[['price', 'color', 'size']],
+               drop_first=True) #The drop_first help remove the multicollinearity introduced by onehotencoding
+
+ohe.fit_transform(X)[:,1:] #This call can drop the first column in the previous ohe, and hence remove multicollinearity
 
